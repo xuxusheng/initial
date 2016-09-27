@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run server",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress --watch-poll=800"
+    "server": "webpack-dev-server --history-api-fallback --inline --progress --watch-poll=800",
+    "check": "npm run check:js && npm run check:ts",
+    "check:js": "git status -s | grep \"src\" | grep -v \"src/lib\" | grep -v \".ts\" | grep -v \".json\" | (grep \".js\" || echo --version) | awk '{print $NF}' | xargs -n1 node node_modules/eslint/bin/eslint.js --fix",
+    "check:ts": "git status -s | grep \"src\" | (grep \".ts\" || echo --version) | awk '{print $NF}' | xargs -n1 node node_modules/tslint/bin/tslint"
   },
   "repository": {
     "type": "git",
@@ -41,6 +44,7 @@
     "babel-plugin-transform-async-to-generator": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
     "css-loader": "^0.25.0",
+    "eslint": "^3.6.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-attr-scope-loader": "^1.4.3",
@@ -53,6 +57,7 @@
     "postcss-scss": "^0.3.0",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
+    "tslint": "^3.15.1",
     "typescript": "^2.0.3",
     "typings": "^1.4.0",
     "webpack": "^1.13.2",
