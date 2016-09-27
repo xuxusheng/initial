@@ -29,7 +29,7 @@ module.exports = function makeWebpackConfig() {
     config.resolve = {
         modulesDirectories: modulesDirectories,
         alias: {},
-        extensions: ['', '.js']
+        extensions: ['', '.js', '.ts']
     }
 
     // entry
