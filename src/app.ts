@@ -1,0 +1,1 @@
+import app from './module/index'

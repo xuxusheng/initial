@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowUnreachableCode": true,
+    "moduleResolution": "node",
+    "module": "es2015",
+    "target": "es6"
+  },
+  "files": [
+    "./typings/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true,
+    "useCache": true,
+    "useBabel": true,
+    "babelCore": "/node_modules/babel-core"
+  }
+}
