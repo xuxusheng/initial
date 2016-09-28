@@ -15,7 +15,7 @@
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true,
     "useCache": true,
-    "useBabel": true,
-    "babelCore": "/node_modules/babel-core"
+    "useBabel": true
+//    "babelCore": "/node_modules/babel-core"
   }
 }
