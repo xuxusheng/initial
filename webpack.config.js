@@ -54,7 +54,7 @@ module.exports = function makeWebpackConfig() {
             // 'echarts',
             // 'echarts-maps/china',
             // 'echarts-maps/world',
-            // 'jjv',  // json validate, https://github.com/acornejo/jjv
+            'jjv',  // json validate, https://github.com/acornejo/jjv
             // 'lz-string',  // 搞缓存的，没太看明白咋用，http://pieroxy.net/blog/pages/lz-string/index.html
             'clone', // 深度复制对象
             'level-js'
