@@ -48,16 +48,16 @@ module.exports = function makeWebpackConfig() {
             // 'angular-translate',     // 国际化模块
             'ng-redux',
             'redux-ui-router',
-/*            'moment',               // 格式化时间的模块
+            // 'moment',               // 格式化时间的模块
             'object-hash',          // 生成 hash 值的模块
-            'numeral',              // 用来格式化数字，比如将 10000 变为 10,000
-            'echarts',
-            'echarts-maps/china',
-            'echarts-maps/world',
+            // 'numeral',              // 用来格式化数字，比如将 10000 变为 10,000
+            // 'echarts',
+            // 'echarts-maps/china',
+            // 'echarts-maps/world',
             'jjv',  // json validate, https://github.com/acornejo/jjv
             'lz-string',  // 搞缓存的，没太看明白咋用，http://pieroxy.net/blog/pages/lz-string/index.html
             'clone', // 深度复制对象
-            'level-js'*/
+            'level-js'
         ]
     }
 

@@ -1,0 +1,5 @@
+- id: ''
+  url: ''
+  method: POST
+  options: 60000
+  withCredentials: true

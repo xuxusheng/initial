@@ -3,6 +3,8 @@ import app from '../module/index'
 import main from './main/index'
 import test from './test/index'
 
+import apiList from '../api/api-list'
+
 import {combineReducers, ReducersMapObject} from 'redux'
 import {router, stateGo} from 'redux-ui-router'
 const {STATE_CHANGE_ERROR} = require('redux-ui-router/lib/action-types')
@@ -17,7 +19,11 @@ interface IChromeWindows extends Window {
     webkitRequestFileSystem?: any
 }
 
-app.config(/*@ngInject*/function ($stateProvider, $urlRouterProvider, $locationProvider) {
+app
+    .config(/*@ngInject*/(apiProvider) => {
+
+    })
+    .config(/*@ngInject*/function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     // check chrome
     let isElectron = navigator.userAgent.toLowerCase().indexOf('avlinsightapp') > -1
@@ -49,7 +55,7 @@ app.config(/*@ngInject*/function ($stateProvider, $urlRouterProvider, $locationP
     middleware.push(thunk)
 
     const reducers: ReducersMapObject = {
-        redirect: (state, action) => {
+/*        redirect: (state, action) => {
             switch (action.type) {
                 case STATE_CHANGE_ERROR :
                     if (action.payload) {
@@ -72,7 +78,7 @@ app.config(/*@ngInject*/function ($stateProvider, $urlRouterProvider, $locationP
                 action: '',
                 stateName: ''
             }
-        },
+        },*/
         router,
         // lang: langReducer,
         // session: sessionReducer,

@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="./dialog.scss">
+<div class="process-dialog-mask" ng-hide="hide"></div>
+<div class="process-dialog-body" ng-class="[status, !hide && 'show']">
+    {{text}} <i class="fa fa-spinner" ng-class="{'fa-pulse': isLoading, 'hide': !isLoading}"></i>
+</div>
