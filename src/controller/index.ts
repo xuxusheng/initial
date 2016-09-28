@@ -20,7 +20,7 @@ interface IChromeWindows extends Window {
 }
 
 app
-    .config(/*@ngInject*/(apiProvider) => {
+    .config(/*@ngInject*/() => {
 
     })
     .config(/*@ngInject*/function ($stateProvider, $urlRouterProvider, $locationProvider) {
